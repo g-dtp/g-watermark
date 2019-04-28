@@ -1,29 +1,22 @@
+
+
 # g-watermark
 
-## Project setup
-```
-npm install
+### 水印功能
+
+```javascript
+import {Watermark} from 'g-watermark'
+let nickName='user007'
+Watermark.init(nickName)
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### 保存至图片
 
-### Compiles and minifies for production
-```
-npm run build
-```
+```javascript
+import {Canvas2some} from 'g-watermark'
 
-### Run your tests
+//获取canvas 得base64缩略图 
+Canvas2some.getHdThumbnail(canvas)
+//canvas 导出png 并下载到本地
+Canvas2some.canvas2hd('文件名', canvas)
 ```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
