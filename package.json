@@ -1,8 +1,8 @@
 {
   "name": "g-watermark",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/g-watermark.umd.min.js",
-  "private": true,
+  "private": false,
   "scripts": {
 	"lib": "vue-cli-service build --target lib --name g-watermark --dest lib packages/index.js",
 	"serve": "vue-cli-service serve",
