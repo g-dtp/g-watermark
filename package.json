@@ -1,6 +1,12 @@
 {
   "name": "g-watermark",
   "version": "0.1.1",
+  "author": "xiasong402@sina.com",
+  "repository": {
+	"type": "git",
+	"url": "https://github.com/g-dtp/g-watermark.git"
+  },
+  "license": "MIT",
   "main": "lib/g-watermark.umd.min.js",
   "private": false,
   "scripts": {
