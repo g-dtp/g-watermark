@@ -24,11 +24,26 @@ function downloadImage (fileName, dataBase) {
 	}
 }
 
+function scaleCanvas (canvas, width, height) {
+	let w = canvas.width
+	let h = canvas.height
+	width = width || w
+	height = height || h
+	let scaleCanvas = document.createElement('canvas')
+	let retCtx = scaleCanvas.getContext('2d')
+	scaleCanvas.width = width
+	scaleCanvas.height = height
+	retCtx.drawImage(canvas, 0, 0, w, h, 0, 0, width, height)
+	return scaleCanvas
+}
+
 /*
 * @canvas 传入需要保存得画布
 * */
+
 function canvas2hd (fileName, canvas) {
-	let base64 = getHdThumbnail(canvas)
+	let _canvas = scaleCanvas(canvas, canvas.width / 2, canvas.height / 2)
+	let base64 = getHdThumbnail(_canvas)
 	downloadImage(fileName, base64)
 }
 
